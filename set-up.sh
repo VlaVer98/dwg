@@ -222,9 +222,7 @@ services:
     volumes:
       - ./work:/opt/adguardhome/work
       - $CONF_DIR:/opt/adguardhome/conf
-    networks:
-      private_network:
-        ipv4_address: 10.2.0.100
+    network_mode: host
 
 networks:
   private_network:
@@ -374,16 +372,7 @@ EOF
     volumes:
       - ./work:/opt/adguardhome/work
       - $CONF_DIR:/opt/adguardhome/conf
-    networks:
-      private_network:
-        ipv4_address: 10.2.0.100
-
-networks:
-  private_network:
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.2.0.0/24
+    network_mode: host
 EOF
             )
             ;;
@@ -540,16 +529,7 @@ services:
     volumes:
       - ./work:/opt/adguardhome/work
       - $CONF_DIR:/opt/adguardhome/conf
-    networks:
-      private_network:
-        ipv4_address: 10.2.0.100
-
-networks:
-  private_network:
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.2.0.0/24
+    network_mode: host
 EOF
             )
             ;;
