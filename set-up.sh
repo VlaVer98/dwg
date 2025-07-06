@@ -395,7 +395,7 @@ version: "3.8"
 services:
   adwireguard:
     container_name: dwg-agh-wg
-    image: iganesh/adwireguard-dark:v0.108.0-b.50
+    image: iganesh/adwireguard-dark:latest
     restart: unless-stopped
     ports:
       - "51820:51820/udp"
